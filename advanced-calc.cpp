@@ -639,13 +639,8 @@ int main() {
 
     try {
       auto t = tokenize_str(input);
-
-      for (auto &token : t)
-        print(token, " ");
-
-      print("");
       auto r = to_rpn(t);
-      /*auto result = evaluate_rpn(r);
+      auto result = evaluate_rpn(r);
 
       if (result == std::floor(result))
         last_result = std::to_string(static_cast<int>(result));
